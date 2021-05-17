@@ -1,0 +1,13 @@
+﻿@model CleanArchitecture.Application.ViewModels.ToDoViewModel
+
+<div class="container body-content">
+  <div class="row todo-content">
+    @foreach (var todo in Model.ToDos)
+    {
+      <div class="todo-image-container">
+        <div class="todo-image" style="background-image:url(@todo.ImageUrl)"></div>
+      </div>
+      <span>@todo.Name</span>
+    }
+  </div>
+</div>
