@@ -1,10 +1,12 @@
 ﻿using CleanArchitecture.Application.ViewModels;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CleanArchitecture.Application.Services
 {
     public interface IToDoService
     {
         ToDoViewModel GetToDos();
+
+        Task Create(ToDoViewModel toDoViewModel);
     }
 }
