@@ -5,6 +5,6 @@ namespace CleanArchitecture.Application.Services
 {
     public interface IToDoService
     {
-        IEnumerable<ToDoViewModel> GetToDos();
+        ToDoViewModel GetToDos();
     }
 }
