@@ -1,7 +1,7 @@
 ﻿using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
 using CleanArchitecture.Infra.Data.Context;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace CleanArchitecture.Infra.Data.Repositories
@@ -21,9 +21,9 @@ namespace CleanArchitecture.Infra.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<ToDo> GetToDos()
+        public IQueryable<ToDo> GetToDos()
         {
-            return _context.Todos;
+            return _context.Todos.AsQueryable();
         }
     }
 }

@@ -16,9 +16,7 @@ namespace CleanArchitecture.MVC.Controllers
 
         public IActionResult Index()
         {
-            var model = _toDoService.GetToDos();
-
-            return View(model);
+            return View(_toDoService.GetToDos());
         }
     }
 }
